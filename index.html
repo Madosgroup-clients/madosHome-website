@@ -11,7 +11,7 @@
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
     <script src="https://kit.fontawesome.com/ee175aa0d8.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.lordicon.com/xdjxvujz.js"></script>
+    <!-- <script src="https://cdn.lordicon.com/xdjxvujz.js"></script> -->
 </head>
 
 <body>
@@ -22,31 +22,50 @@
                     Madoshome
                 </a>
             </h1>
-            <ul class="Menu">
-                <li>
-                    <a href="#home">Explore</a>
-                </li>
-                <li>
-                    <a href="#about-us">Download</a>
-                </li>
-                <li>
-                    <a href="#Contact-us">Features</a>
-                </li>
-                <li>
-                    <a href="#Contact-us">Subscription</a>
-                </li>
-                <li>
-                    <a href="#Contact-us">Payment Method</a>
-                </li>
-                <li id="language">
-                    <i class="fas fa-globe"></i>
-                    <select name="Select-languages" id="">
-                        <option value="">Language</option>
-                        <option value="En">English</option>
-                    </select>
-                </li>
-            </ul>
+
+            <div class="Menu">
+                <span class="close_button">
+                    <i id='close' class="fas fa-times"></i>
+                </span>
+                <ul class="list">
+                    <li>
+                        <a href="#home">Explore</a>
+                    </li>
+                    <li>
+                        <a href="#about-us">Download</a>
+                    </li>
+                    <li>
+                        <a href="#Contact-us">Features</a>
+                    </li>
+                    <li>
+                        <a href="#Contact-us">Subscriptions</a>
+                    </li>
+                    <li>
+                        <a href="#Contact-us">Payment Methods</a>
+                    </li>
+                </ul>
+                <span class="socialmedia_link">
+                    <a href="https://facebook.com/madoshome/">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://facebook.com/madoshome/">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://facebook.com/madoshome/">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="https://facebook.com/madoshome/">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </span>
+            </div>
+
+            <div class="access_tools">
+                <i class="fas fa-globe"></i>
+                <i id="visible_amburger" class="fas fa-bars amburger"></i>
+            </div>
         </nav>
+
         <main>
             <img src="./img/madosHome.png" alt="Mados_home">
             <div class="vision_Company_and_text">
@@ -56,52 +75,29 @@
                     needs and where agents, companies and owners
                     can publish their houses, hotels and tour sites
                 </p>
-                <a href="#">Explore</a>
+                <a href="">Explore</a>
             </div>
-            <!-- <div class="App_sharing_container">
-                <div class="app_container">
-                    <a href="https//app-store.com/">
-                        <i class="fab fa-android"></i>
-                        <p>Android</p>
-                        <p>></p>
-                    </a>
-                    
-                    <a href="#">
-                        <i class="fab fa-apple"></i>
-                        <p id="s_title">Apple</p>
-                        <p>></p>
-                    </a>
-                    <a href="#">
-                        <i class="fas fa-desktop"></i>
-                        <p id="s_title">Desktop</p>
-                        <p>></p>
-                    </a>
-                </div>
-            </div> -->
         </main>
     </section>
 
 
     <section class="download">
-        <!-- <i class="fas fa-download"></i> -->
         <div class="text_header">
             <h2>Download</h2>
-            <!-- <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas vel dolorem, quo in eos quaerat. Animi
-                soluta vitae blanditiis similique corrupti minus</p> -->
         </div>
         <div class="main_container_download">
             <div class="img_phonedownload">
                 <div class="android">
-                    <img src="./img/android.png" alt="android_MadosHome" width="200" height="350">
+                    <img src="./img/android.png" alt="android_MadosHome" >
                     <a href="#">Android</a>
                 </div>
                 <div class="android">
-                    <img src="./img/iphone3.png" alt="android_MadosHome" width="200" height="350">
+                    <img src="./img/iphone3.png" alt="android_MadosHome">
                     <a href="#">Iphone</a>
                 </div>
             </div>
             <div class="desktop">
-                <img src="./img/desktop.png" alt="MadosHome" width="500" height="330">
+                <img src="./img/desktop.png" alt="MadosHome">
                 <div class="two_mark">
                     <a href="#">MacOS</a>
                     <a href="#">Windows</a>
@@ -226,6 +222,8 @@
             </div>
         </div>
     </section>
+
+
     <footer>
         <div class="upper_footer">
             <div class="icon_logo_container">
@@ -310,6 +308,7 @@
 
         </div>
     </footer>
+    <script src="./js/madoshome.js" ></script>
 </body>
 
 </html>
