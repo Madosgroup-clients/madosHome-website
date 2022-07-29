@@ -39,6 +39,59 @@ html.body {
   overflow: hidden;
   position: relative;
 }
+.language_displayer{
+  display: none;
+  position: absolute;
+  margin: auto;
+  right: 1rem;
+  top: 4.1em;
+  background-color: var(--bgColor);
+  padding: 1rem 2rem;
+  border-radius: .3rem;
+  flex-direction: column;
+  gap: .5rem;
+}
+.visible {
+  display: flex;
+}
+.language_displayer:before{
+  content: '';
+  position: absolute;
+  background-color: var(--bgColor);
+  width: 20px;
+  height: 20px;
+  margin: auto;
+  top: -.5rem;
+  right: 3vw;
+  transform: rotate(135deg);
+  border-radius: .2rem;
+  z-index: 1;
+}
+.language_displayer > p {
+  font-weight: 500;
+  color: #a8a8a8;
+  width: 100%;
+}
+.language_displayer > .language{
+  display: flex;
+  flex-direction: column;
+  gap: .3rem;
+  width: 100%;
+}.language_displayer > .language > a{
+  cursor: pointer;
+  width: 100%;
+  padding-inline: .5rem;
+  font-size: .9rem;
+  font-weight: 450;
+  color: var(--textColor);
+}.language_displayer > .language > a:hover{
+  color: var(--primaryColor);
+}.language_displayer > .language > .active {
+  width: 100%;
+  border-left: .2rem solid var(--primaryColor);
+  color: var(--primaryColor);
+  
+}
 .Home_page > nav {
   display: flex;
   gap: 1rem;
@@ -598,7 +651,7 @@ footer > .upper_footer > .footer_menu_container {
     display: flex;
     justify-content: flex-end;
     width: 100%;
-    padding: 0.3rem 0.5rem;
+    padding: 1rem .9rem;
   }
   .Home_page > nav > .Menu > .close_button > i {
     color: var(--bgColor);
