@@ -52,6 +52,7 @@ html.body {
   border-radius: .3rem;
   flex-direction: column;
   gap: .5rem;
+  z-index: 2;
 }
 
 .language_displayer:before{
@@ -181,7 +182,7 @@ main {
  main > .img_container> img {
   /* position: relative;
   margin: auto; */
-  z-index: 2;
+  z-index: 1;
   width: var(--imgLogosize);
   height: var(--imgLogosize);
 }
