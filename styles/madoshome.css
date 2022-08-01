@@ -172,7 +172,7 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 4.5rem;
+  gap: 4rem;
 }
 .img_container {
   width: fit-content;
@@ -220,6 +220,7 @@ main > .vision_Company_and_text {
 }
 main > .vision_Company_and_text > h1 {
   font-size: var(--textFontsizeTitle);
+  padding: 1rem;
 }
 main > .vision_Company_and_text > p {
   width: 100vw;
