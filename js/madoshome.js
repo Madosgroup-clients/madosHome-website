@@ -50,4 +50,51 @@ close.addEventListener('click', (e) => {
     menuHidden.classList.remove('appear')
 })
 
-// language();
+
+var DatatobeValidate = {},
+formvalidation = (event)=>{
+    event.stopPropagation();
+    var identifier = event.target.name
+    var value = event.target.value
+    return DatatobeValidate = {...DatatobeValidate, [identifier]:value}
+}
+
+nextStep = (event) => {
+    event.preventDefault()
+    event.stopPropagation();
+    const {email, confirmation, message} = DatatobeValidate;
+
+    message.split(" ").join("").length < 50 || message.split(" ").join("").length >= 100 
+        ? document.querySelectorAll('.error_text')[1].style.display = "block"
+        : document.querySelectorAll('.error_text')[1].style.display = "none"
+    // if(message.s)
+
+    if(email !== confirmation){
+        document.querySelector('#confirmation').classList.toggle('error')
+        document.querySelector('.error_text').style.display = "block"
+    }else{
+        document.querySelector('#confirmation').classList.remove('error')
+        document.querySelector('.error_text').style.display = "none"
+    }
+}
+
+const getDeviceType = () => {
+  const ua = navigator.userAgent;
+  if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
+    return "tablet";
+  }
+  if (
+    /Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(
+      ua
+    )
+  ) {
+    return "mobile";
+  }
+  return "desktop";
+};
+
+var radio = document.querySelectorAll("#radio");
+console.log(radio)
+
+
+console.log(getDeviceType())

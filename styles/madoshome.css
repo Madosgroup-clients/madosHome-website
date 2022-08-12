@@ -84,7 +84,7 @@ html.body {
   border-radius: 0.3rem;
   flex-direction: column;
   gap: 0.5rem;
-  z-index: 2;
+  z-index: 3;
 }
 
 .language_displayer:before {
@@ -98,7 +98,7 @@ html.body {
   right: 3vw;
   transform: rotate(135deg);
   border-radius: 0.2rem;
-  z-index: 1;
+  z-index: 3;
 }
 .visible {
   display: flex;
@@ -133,14 +133,15 @@ html.body {
 }
 .Home_page > nav {
   display: flex;
-  gap: 1rem;
-  width: 100%;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
+  /* bottom: 0; */
+  gap: 1rem;
   padding-inline: 4%;
   padding-block: 1rem;
   background-color: var(--sprimaryColor);
-  z-index: 3;
+  z-index: 4;
 }
 .Home_page > nav > h1 > a {
   font-size: var(--logoFontsize);
@@ -220,6 +221,7 @@ main > .img_container > img {
   height: var(--imgLogosize);
 }
 
+
 main > .img_container::before,
 main > .img_container::after {
   content: "";
@@ -239,7 +241,7 @@ main > .img_container::after {
 
 @keyframes pulse {
   100% {
-    transform: scale(1.6);
+    transform: scale(1.5);
     opacity: 0;
   }
 }
@@ -842,3 +844,4 @@ footer > .upper_footer > .footer_menu_container {
     padding-inline: 2rem;
   }
 }
+
