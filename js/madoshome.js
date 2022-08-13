@@ -52,49 +52,52 @@ close.addEventListener('click', (e) => {
 
 
 var DatatobeValidate = {},
-formvalidation = (event)=>{
-    event.stopPropagation();
-    var identifier = event.target.name
-    var value = event.target.value
-    return DatatobeValidate = {...DatatobeValidate, [identifier]:value}
-}
+    formvalidation = (event) => {
+        event.stopPropagation();
+        var identifier = event.target.name
+        var value = event.target.value
+        return DatatobeValidate = { ...DatatobeValidate, [identifier]: value }
+    }
 
 nextStep = (event) => {
     event.preventDefault()
     event.stopPropagation();
-    const {email, confirmation, message} = DatatobeValidate;
+    const { email, confirmation, message } = DatatobeValidate;
 
-    message.split(" ").join("").length < 50 || message.split(" ").join("").length >= 100 
+    message.split(" ").join("").length < 50 || message.split(" ").join("").length >= 100
         ? document.querySelectorAll('.error_text')[1].style.display = "block"
         : document.querySelectorAll('.error_text')[1].style.display = "none"
     // if(message.s)
 
-    if(email !== confirmation){
+    if (email !== confirmation) {
         document.querySelector('#confirmation').classList.toggle('error')
         document.querySelector('.error_text').style.display = "block"
-    }else{
+    } else {
         document.querySelector('#confirmation').classList.remove('error')
         document.querySelector('.error_text').style.display = "none"
     }
 }
 
 const getDeviceType = () => {
-  const ua = navigator.userAgent;
-  if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
-    return "tablet";
-  }
-  if (
-    /Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(
-      ua
-    )
-  ) {
-    return "mobile";
-  }
-  return "desktop";
+    const ua = navigator.userAgent;
+
+    if (/(tablet|iPad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
+        return "tablet";
+    }if(/iP(hone|od)/.test(ua)){
+        return "iPhone"
+    }
+    if (
+        /Mobile|Android|BlackBerry|IEMobile|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(
+            ua
+        )
+    ) {
+        return "Android";
+    }
+    return "Desktop";
 };
 
 var radio = document.querySelectorAll("#radio");
-console.log(radio)
 
-
-console.log(getDeviceType())
+for (let i = 0; i < radio.length; i++) {
+    getDeviceType() === radio[i].value ? radio[i].setAttribute('checked', true) : false;
+}

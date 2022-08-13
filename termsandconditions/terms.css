@@ -1,0 +1,13 @@
+.liability{
+    /* background-color: red; */
+    padding-left: 2rem;
+    /* padding-top: 2rem; */
+}.liability li{
+    color: var(--sprimaryColor);
+    list-style: disc;
+    padding-block: .3rem;
+    font-size: clamp(0.8rem, 0.4215rem + 1.73vw, 1rem);
+}
+p > a {
+    color: var(--primaryColor) !important;
+}
