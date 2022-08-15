@@ -11,14 +11,14 @@
       can publish their houses, hotels and tour sites
     " />
     <!-- favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="../favicon/android-chrome-192x192.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="../favicon/android-chrome-512x512.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../../favicon/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="../../favicon/android-chrome-512x512.png">
 
-    <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
-    <link rel="manifest" href="../favicon/site.webmanifest">
-    <link rel="mask-icon" href="../favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../favicon/favicon-16x16.png">
+    <link rel="manifest" href="../../favicon/site.webmanifest">
+    <link rel="mask-icon" href="../../favicon/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileImage" content="favicon/mstile-150x150.png">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
@@ -27,9 +27,8 @@
 
 
     <title>Madoshome</title>
-    <link rel="stylesheet" href="../styles/contact.css">
-    <link rel="stylesheet" href="../termsandconditions/terms.css">
-    <link rel="stylesheet" href="../styles/madoshome.css">
+    <link rel="stylesheet" href="../../styles/contact.css">
+    <link rel="stylesheet" href="../../styles/madoshome.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
@@ -42,15 +41,14 @@
             <div class="language_displayer">
                 <p>Select your language</p>
                 <div class="language">
-                    <a href="./" class="active">English </a>
-                    <a href="./fr/">French </a>
-                    <a href="./sw/">Kiswahili </a>
+                    <a href="../" class="active">English </a>
+                    <a href="../fr/">French </a>
+                    <a href="./">Kiswahili </a>
                 </div>
             </div>
-            
             <nav>
                 <h1>
-                    <a href="/">
+                    <a href="../../sw/">
                         Madoshome
                     </a>
                 </h1>
@@ -64,16 +62,16 @@
                             <a target="-blanck" href='https://app.madoshome.com'>Explore</a>
                         </li>
                         <li>
-                            <a href="/#Download">Download</a>
+                            <a href="../../sw/#Download">Kupakua</a>
                         </li>
                         <li>
-                            <a href="/#Features">Features</a>
+                            <a href="../../sw/#Features">Vipengele</a>
                         </li>
                         <li>
-                            <a href="/#Subscriptions">Subscriptions</a>
+                            <a href="../../sw/#Subscriptions">Usajili</a>
                         </li>
                         <li>
-                            <a href="/#paymentMethod">Payment Methods</a>
+                            <a href="../../sw/#paymentMethod">Mbinu za Malipo</a>
                         </li>
                     </ul>
                     <span class="socialmedia_link">
@@ -99,46 +97,70 @@
             </nav>
             <div class="contact_cover">
                 <div class="contact_us">
-                    <h4>Payment policies</h4>
+                    <h4>Wasiliana na Madoshome</h4>
                     <div class="contact_txt_container">
-                        <h5>1. Credit and debit card</h5>
+                        <h5>Madoshome support</h5>
                         <p>
-                            For payment processing, we use Stripe as our payment gateway because it offers payment
-                            processing software and application programming interfaces that best suit our needs.
-                            Millions of businesses of all sizes, from startups to Fortune 500 companies, trust Stripe's
-                            software and APIs to accept payments, send payments, and manage their online businesses.
-                            <a target="-blanck" href='https://www.stripe.com/privacy'>
-                                Visite Stripe
-                            </a>
-                           </p>
+                            Ili kukusaidia vyema, wasiliana nasi kutoka kwa kifaa chako kwa kufungua <b>Madoshome> Account> Help>
+                                Wasiliana nasi</b>.
+                            Unaweza pia kutembelea Kituo chetu cha Usaidizi kwa maelezo zaidi.
+                        </p>
                         <br>
+                        <p>
+                            Tujulishe jinsi unavyotumia Madoshome kwa kutoa taarifa muhimu hapa chini. Kisha bonyeza au
+                             Bonyeza
+                             "Tuma Swali" ili kuwasiliana nasi.
+                        </p>
+                        <form class="contact_information" onchange="formvalidation(event)" onsubmit="nextStep(event)">
+                            <div class="cordonne">
+                                <label for="phoneNumber">
+                                    Nambari ya simu
+                                </label>
+                                <input type="tel" name="phoneNumber" id="phoneNumber" required>
+                                <label for="email">
+                                    Barua pepe
+                                </label>
+                                <input type="email" name="email" id="email" required>
+                                <label for="confirmation">
+                                    Thibitisha barua pepe
+                                </label>
+                                <input type="email" name="confirmation" id="confirmation" required>
+                                <span class="error_text">Barua pepe uliyoweka hailingani.</span>
+                            </div>
 
-                        <p>
-                            A payment intent is created by our server and sends back to our client-side application a
-                            secret code that was generated by Stripe. The secret code represents the payment information
-                            of the selected subscription plan.
-                            Once the payment intent has been created and sent back to our client-side application, the
-                            latter displays a secure Stripe payment form where you will be asked to provide your card
-                            information (card number, expiry date, CVC, code postal) and to confirm the payment linked
-                            to the secret code.
-                            The funds corresponding to the amount of the chosen formula will be withdrawn from your
-                            current account or will be debited from your line of credit in near real time.
-                            At this time, we do not support refunding funds. Therefore, funds once paid are
-                            non-refundable.
-                        </p>
-                        <h5>2. Bank transfer</h5>
-                        <p>How to pay by bank transfer?</p>
-                        <br>
-                        <p>
-                            To activate your subscription, please transfer the sum corresponding to the selected
-                            subscription plan to our payment agent, quoting as the name of the sender the reference
-                            number that will be generated by our platform. The reference number is valid for 24 hours,
-                            at which time payment is expected. If the reference number is not included in the notes with
-                            the transfer, we will not be able to activate your subscription. This includes the
-                            irreversibility of the operation, hence the loss of your money.
-                            <br>
-                            <b>The process of activating your subscription may take up to 7 business days.</b>
-                        </p>
+                            <div class="supplementary_info">
+                                <h5>Unatumia kifaa gani?</h5>
+                                <label>
+                                    iOs:
+                                    <input type="radio" id="radio" name="devicetype" value="iPhone" required>
+                                </label>
+                                <label>
+                                    Android :
+                                    <input type="radio" id="radio" name="devicetype" value="Android" required>
+                                </label>
+                                <label>
+                                    Kompyuta kibao :
+                                    <input type="radio" id="radio" name="devicetype" value="Tablet" required>
+                                </label>
+                                <label>
+                                    Desktop na Wavuti :
+                                    <input type="radio" id="radio" name="devicetype" value="Desktop" required>
+                                </label>
+                                <!-- <label>
+                                Other :
+                                <input type="radio" name="devicetype" value="Other">
+                            </label> -->
+                            </div>
+                            <div class="message">
+                                <h5>Andika ujumbe wako hapa chini</h5>
+                                <textarea name="message" id="message" placeholder="Huu hapa ujumbe wako "
+                                    required></textarea>
+                                <span class="error_text">Lazima uweke kati ya herufi 50 na 100.</span>
+                            </div>
+                            <button type="submit" id="button">
+                                hatua ifuatayo
+                            </button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -148,8 +170,8 @@
         <footer>
             <div class="upper_footer">
                 <div class="icon_logo_container">
-                    <img src="../img/madosHome.png" alt="Mados_home_logo" width="100" height="100">
-                    <h3>Find a house, hotel and tourist site with ease !</h3>
+                    <img src="../../img/madosHome.png" alt="Mados_home_logo" width="100" height="100">
+                    <h3>Pata kwa urahisi nyumba, hoteli na tovuti ya watalii !</h3>
                     <span class="socialmedia_link">
                         <a href="https://facebook.com/madoshome/">
                             <i class="fab fa-facebook-f"></i>
@@ -167,37 +189,37 @@
                 </div>
                 <div class="footer_menu_container">
                     <ul class="menu">
-                        <h4>Menu</h4>
+                        <h4>Menyu</h4>
                         <li>
                             <a target="-blanck" href='https://app.madoshome.com'>Explore</a>
                         </li>
                         <li>
-                            <a href="/#Download">Download</a>
+                            <a href="../../sw/#Download">Kupakua</a>
                         </li>
                         <li>
-                            <a href="/#Features">Features</a>
+                            <a href="../../sw/#Features">Vipengele</a>
                         </li>
                         <li>
-                            <a href="/#Subscriptions">Subscriptions</a>
+                            <a href="../../sw/#Subscriptions">Usajili</a>
                         </li>
                         <li>
-                            <a href="/#paymentMethod">Payment Methods</a>
+                            <a href="../../sw/#paymentMethod">Mbinu za Malipo</a>
                         </li>
                         <li>
-                            <a href="./">Paiement Policies</a>
+                            <a href="../../privacy/sw/">Sera za malipo</a>
                         </li>
                     </ul>
                     <ul class="menu">
-                        <h4>Company</h4>
+                        <h4>Kampuni</h4>
                         <li>
-                            <a href="../aboutus/">About</a>
+                            <a href="../../aboutus/">Kuhusu</a>
                         </li>
                         <li>
-                            <a href="../contactus/">Get in touch</a>
+                            <a href="./">Wasiliana</a>
                         </li>
                     </ul>
                     <ul class="menu">
-                        <h4>Download</h4>
+                        <h4>Kupakua</h4>
                         <li>
                             <a href="#home">Mac</a>
                         </li>
@@ -208,7 +230,7 @@
                             <a href="#Contact-us">Android</a>
                         </li>
                         <li>
-                            <a href="#Contact-us">iOS</a>
+                            <a href="#Contact-us">Iphone</a>
                         </li>
                     </ul>
                 </div>
@@ -224,15 +246,15 @@
                     </script>
                 </p>
                 <p>
-                    <a href='../termsandconditions/' style="color:#bffff7 !important;">
-                        Terms and Conditions
+                    <a href='../../termsandconditions/sw/' style="color:#bffff7 ;">
+                        Masharti
                     </a>
                 </p>
 
             </div>
         </footer>
     </div>
-    <script src="../js/madoshome.js"></script>
+    <script src="../../js/madoshome.js"></script>
 </body>
 
 </html>

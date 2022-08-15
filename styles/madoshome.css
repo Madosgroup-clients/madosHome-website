@@ -557,7 +557,6 @@ main > .vision_Company_and_text > a {
 .container {
   width: 90%;
   text-align: center;
-  padding: 1rem;
   border-radius: 0.5rem;
 }
 .sp_method {
@@ -568,6 +567,9 @@ main > .vision_Company_and_text > a {
   text-align: justify;
   justify-content: center;
   align-items: center;
+}.sp_method > img{
+  width: 14rem;
+  height: 25rem;
 }
 .sp_method > .content > h3 {
   font-size: clamp(1rem, 0.4799rem + 2.19vw, 2rem);

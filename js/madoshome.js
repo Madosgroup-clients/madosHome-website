@@ -5,6 +5,7 @@ var accessContainer = document.querySelector('.access_tools')
 var languagelistactive = document.querySelector('.language_displayer');
 
 var menuselection = languagelistactive.querySelector('language');
+
 // menuselection = menuselection.querySelectorAll('a');
 
 
@@ -101,3 +102,4 @@ var radio = document.querySelectorAll("#radio");
 for (let i = 0; i < radio.length; i++) {
     getDeviceType() === radio[i].value ? radio[i].setAttribute('checked', true) : false;
 }
+
