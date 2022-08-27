@@ -37,108 +37,120 @@
 </head>
 
 <body>
+    <nav class="stickybackground otherspage">
+        <h1>
+            <a href="../../fr/">
+                Madoshome
+            </a>
+        </h1>
+
+        <div class="Menu">
+            <span class="close_button">
+                <i id='close' class="fas fa-times"></i>
+            </span>
+            <ul class="list">
+                <li>
+                    <a aria-label="RedirectionMadosApp" target="-blanck" href='https://app.madoshome.com'>Explore</a>
+                </li>
+                <li>
+                    <a aria-label="DownloadMadosapp" href="../../fr/#Download">Télécharger</a>
+                </li>
+                <li>
+                    <a aria-label="FeaturesMadosapp" href="../../fr/#Features">Fonctionnalités</a>
+                </li>
+                <li>
+                    <a aria-label="SubscriptionsMadosapp" href="../../fr/#Subscriptions">Souscription</a>
+                </li>
+                <li>
+                    <a aria-label="PaimentMethods" href="../../fr/#paymentMethod">Methodes de paiement</a>
+                </li>
+            </ul>
+            <span class="socialmedia_link">
+                <a href="https://facebook.com/madoshome/">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://facebook.com/madoshome/">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://facebook.com/madoshome/">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="https://facebook.com/madoshome/">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </span>
+        </div>
+
+        <div class="access_tools">
+            <i class="fas fa-globe"></i>
+            <i id="visible_amburger" class="fas fa-bars amburger"></i>
+        </div>
+        <div class="language_displayer">
+            <p>Selectionner votre language</p>
+            <div class="language">
+                <a href="../">Anglais </a>
+                <a href="./" class="active">Français </a>
+                <a href="../sw/">Kiswahili </a>
+            </div>
+        </div>
+    </nav>
     <div class="contact_main_container">
         <div id="../" class="Home_page">
-                  <div class="language_displayer">
-                <p>Selectionner votre language</p>
-                <div class="language">
-                    <a href="../">Anglais </a>
-                    <a href="./" class="active">Français </a>
-                    <a href="../sw/">Kiswahili </a>
-                </div>
-            </div>
-            <nav>
-                <h1>
-                    <a href="../../fr/">
-                        Madoshome
-                    </a>
-                </h1>
 
-                <div class="Menu">
-                    <span class="close_button">
-                        <i id='close' class="fas fa-times"></i>
-                    </span>
-                    <ul class="list">
-                        <li>
-                            <a aria-label="RedirectionMadosApp" target="-blanck" href='https://app.madoshome.com'>Explore</a>
-                        </li>
-                        <li>
-                            <a aria-label="DownloadMadosapp" href="../../fr/#Download">Télécharger</a>
-                        </li>
-                        <li>
-                            <a aria-label="FeaturesMadosapp" href="../../fr/#Features">Fonctionnalités</a>
-                        </li>
-                        <li>
-                            <a aria-label="SubscriptionsMadosapp" href="../../fr/#Subscriptions">Souscription</a>
-                        </li>
-                        <li>
-                            <a aria-label="PaimentMethods" href="../../fr/#paymentMethod">Methodes de paiement</a>
-                        </li>
-                    </ul>
-                    <span class="socialmedia_link">
-                        <a href="https://facebook.com/madoshome/">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="https://facebook.com/madoshome/">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="https://facebook.com/madoshome/">
-                            <i class="fab fa-whatsapp"></i>
-                        </a>
-                        <a href="https://facebook.com/madoshome/">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                    </span>
-                </div>
-
-                <div class="access_tools">
-                    <i class="fas fa-globe"></i>
-                    <i id="visible_amburger" class="fas fa-bars amburger"></i>
-                </div>
-            </nav>
             <div class="contact_cover">
                 <div class="contact_us">
                     <h4>Politiques de paiement</h4>
                     <div class="contact_txt_container">
                         <h5>1. Carte de crédit et de débit</h5>
                         <p>
-                            Pour le traitement des paiements, nous utilisons Stripe comme passerelle de paiement car il offre le paiement
-                            les logiciels de traitement et les interfaces de programmation applicative les mieux adaptés à nos besoins.
-                            Des millions d'entreprises de toutes tailles, des startups aux entreprises du Fortune 500, font confiance à Stripe
-                            logiciels et API pour accepter les paiements, envoyer des paiements et gérer leurs activités en ligne.
+                            Pour le traitement des paiements, nous utilisons Stripe comme passerelle de paiement car il
+                            offre le paiement
+                            les logiciels de traitement et les interfaces de programmation applicative les mieux adaptés
+                            à nos besoins.
+                            Des millions d'entreprises de toutes tailles, des startups aux entreprises du Fortune 500,
+                            font confiance à Stripe
+                            logiciels et API pour accepter les paiements, envoyer des paiements et gérer leurs activités
+                            en ligne.
                             <a target="-blanck" href='https://www.stripe.com/privacy'>
                                 Visitez Stripe
                             </a>
                         </p>
                         <br>
                         <p>
-                            Une intention de paiement est créée par notre serveur et renvoie à notre application côté client un
+                            Une intention de paiement est créée par notre serveur et renvoie à notre application côté
+                            client un
                             code secret généré par Stripe. Le code secret représente les informations de paiement
                             du plan d'abonnement sélectionné.
                             Une fois l'intention de paiement créée et renvoyée à notre application côté client, le
-                            ce dernier affiche un formulaire de paiement sécurisé Stripe où il vous sera demandé de fournir votre carte
-                            informations (numéro de carte, date d'expiration, CVC, code postal) et de confirmer le paiement associé
+                            ce dernier affiche un formulaire de paiement sécurisé Stripe où il vous sera demandé de
+                            fournir votre carte
+                            informations (numéro de carte, date d'expiration, CVC, code postal) et de confirmer le
+                            paiement associé
                             au code secret.
                             Les fonds correspondant au montant de la formule choisie seront prélevés sur votre
                             compte courant ou sera débité de votre marge de crédit en temps quasi réel.
-                            Pour le moment, nous ne prenons pas en charge le remboursement des fonds. Par conséquent, les fonds une fois déboursés sont
+                            Pour le moment, nous ne prenons pas en charge le remboursement des fonds. Par conséquent,
+                            les fonds une fois déboursés sont
                             non remboursable.
                         </p>
                         <h5>2. Virement bancaire</h5>
-                         <p>Comment payer par virement bancaire ?</p>
-                         <br>
-                         <p>
-                             Pour activer votre abonnement, veuillez virer le montant correspondant à l'abonnement sélectionné
-                             plan d'abonnement à notre agent de paiement, en citant comme nom de l'expéditeur la référence
-                             numéro qui sera généré par notre plateforme. Le numéro de référence est valable 24 heures,
-                             lorsque le paiement est attendu. Si le numéro de référence n'est pas inclus dans les notes avec
-                             transfert, nous ne pourrons pas activer votre abonnement. Cela inclut le
-                             irréversibilité de l'opération, d'où la perte de votre argent.
-                             <br>
-                             <br>
+                        <p>Comment payer par virement bancaire ?</p>
+                        <br>
+                        <p>
+                            Pour activer votre abonnement, veuillez virer le montant correspondant à l'abonnement
+                            sélectionné
+                            plan d'abonnement à notre agent de paiement, en citant comme nom de l'expéditeur la
+                            référence
+                            numéro qui sera généré par notre plateforme. Le numéro de référence est valable 24 heures,
+                            lorsque le paiement est attendu. Si le numéro de référence n'est pas inclus dans les notes
+                            avec
+                            transfert, nous ne pourrons pas activer votre abonnement. Cela inclut le
+                            irréversibilité de l'opération, d'où la perte de votre argent.
+                            <br>
+                            <br>
 
-                             <b>Le processus d'activation de votre abonnement peut prendre jusqu'à 7 jours ouvrés.</b>
-                         </p>
+                            <b>Le processus d'activation de votre abonnement peut prendre jusqu'à 7 jours ouvrés.</b>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -229,7 +241,7 @@
                         Termes et conditions
                     </a>
                 </p>
-    
+
             </div>
         </footer>
     </div>

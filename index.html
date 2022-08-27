@@ -35,13 +35,56 @@
     <!-- <script src="https://cdn.lordicon.com/xdjxvujz.js"></script> -->
     <script src="./js/imgGeneratorSvg.js" defer></script>
 </head>
+<!-- onscroll="addstickybackground(event)" -->
+<body >
 
-<body>
-    <section id="/" class="Home_page">
-        <div class="svg_container">
-            <div class="main_svg">
-                <!-- <img src="../img/svg_cover/home.svg" alt="Home" style="--i:11"> -->
-            </div>
+    <nav class="stickybackground">
+        <h1>
+            <a href="#">
+                Madoshome
+            </a>
+        </h1>
+
+        <div class="Menu">
+            <span class="close_button">
+                <i id='close' class="fas fa-times"></i>
+            </span>
+            <ul class="list">
+                <li>
+                    <a target="-blanck" href='https://app.madoshome.com'>Explore</a>
+                </li>
+                <li>
+                    <a href="#Download">Download</a>
+                </li>
+                <li>
+                    <a href="#Features">Features</a>
+                </li>
+                <li>
+                    <a href="#Subscriptions">Subscriptions</a>
+                </li>
+                <li>
+                    <a href="#paymentMethod">Payment Methods</a>
+                </li>
+            </ul>
+            <span class="socialmedia_link">
+                <a href="https://facebook.com/madoshome/">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://facebook.com/madoshome/">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://facebook.com/madoshome/">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="https://facebook.com/madoshome/">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </span>
+        </div>
+
+        <div class="access_tools">
+            <i class="fas fa-globe"></i>
+            <i id="visible_amburger" class="fas fa-bars amburger"></i>
         </div>
         <div class="language_displayer">
             <p>Select your language</p>
@@ -51,55 +94,17 @@
                 <a href="./sw/">Kiswahili </a>
             </div>
         </div>
-        <nav>
-            <h1>
-                <a href="#">
-                    Madoshome
-                </a>
-            </h1>
+    </nav>
 
-            <div class="Menu">
-                <span class="close_button">
-                    <i id='close' class="fas fa-times"></i>
-                </span>
-                <ul class="list">
-                    <li>
-                        <a target="-blanck" href='https://app.madoshome.com'>Explore</a>
-                    </li>
-                    <li>
-                        <a href="#Download">Download</a>
-                    </li>
-                    <li>
-                        <a href="#Features">Features</a>
-                    </li>
-                    <li>
-                        <a href="#Subscriptions">Subscriptions</a>
-                    </li>
-                    <li>
-                        <a href="#paymentMethod">Payment Methods</a>
-                    </li>
-                </ul>
-                <span class="socialmedia_link">
-                    <a href="https://facebook.com/madoshome/">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="https://facebook.com/madoshome/">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="https://facebook.com/madoshome/">
-                        <i class="fab fa-whatsapp"></i>
-                    </a>
-                    <a href="https://facebook.com/madoshome/">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                </span>
-            </div>
+    <div class="svg_container">
+        <div class="main_svg">
+            <!-- <img src="../img/svg_cover/home.svg" alt="Home" style="--i:11"> -->
+        </div>
+    </div>
 
-            <div class="access_tools">
-                <i class="fas fa-globe"></i>
-                <i id="visible_amburger" class="fas fa-bars amburger"></i>
-            </div>
-        </nav>
+    <section id="/" class="Home_page">
+   
+
 
         <main>
             <div class="img_container">
@@ -116,6 +121,7 @@
             </div>
         </main>
     </section>
+
 
 
     <section id="Download" class="download">
@@ -148,39 +154,47 @@
         <div class="feature_container">
             <div class="single_feature">
                 <i class="fas fa-map-marker-alt"></i>
-                <h3>Near By</h3>
+                <h3>Nearby</h3>
                 <p>
-                    We provide you with a map view that will allow you to easily explore the different properties based
+                    Easily explore differents
+                    nearby properties based
                     on your current location.
                 </p>
             </div>
             <div class="single_feature">
                 <i class="fas fa-search-location"></i>
                 <h3>Search</h3>
+                <!-- <br> -->
                 <p>
-                    We offer you an efficient search. Thanks to the relevant data that we ask for in your search. you
-                    can have a precise search that will offer you the house of your dreams.
+                    We offer you an efficient search. Thanks to the relevant data that we ask for, you
+                    will find the property of your search.
                 </p>
             </div>
             <div class="single_feature">
                 <i class="fas fa-folder-plus"></i>
                 <h3>Publish</h3>
                 <p class="txt">
-                    The platform doesn't just give you the view. but also you can add your property in our platform with
+                    We offer you the possibility to have up to 3 properties publicly visible on our platform for free.
+                    To have more than 3 publicly visible properties, you will need to subscribe to our platform.
+                    <!-- You can publish contents on our platform. It include creating and updating your post on our platform. 
+                    The published content may include text, images, videos, and any other supported type of media. -->
+                    <!-- We offfer you the posibility of making your  property visible on our platform throughout 3 free subscription -->
+                    <!-- You can add your property in our platform with
                     or without subscription.
-                    To benefit from the possibility of making your property visible, you must have a subscription.
+                    To benefit from the possibility of making your property visible, you must have a subscription. -->
                 </p>
             </div>
             <div class="single_feature">
                 <i class="fab fa-gratipay"></i>
                 <h3>Save favotites</h3>
                 <p>
-                    In order to make your visit to our platform pleasant, we offer you to have a favorite properties box
+                    To make your visit to our platform enjoyable, we offer you the possibility of having a favorites box
                     where you can store your favorite properties.
                 </p>
             </div>
         </div>
     </section>
+    
     <section id="Subscriptions" class="subscription">
         <h2>Subscription plans</h2>
         <div class="subscription_plan_container">
@@ -222,6 +236,7 @@
             </div>
         </div>
     </section>
+
     <section id="paymentMethod" class="paiement_method">
         <h2>Payment methods</h2>
         <div class="container">
@@ -230,7 +245,7 @@
                 <div class="content">
                     <h3>Credit or Debit Card</h3>
                     <p>
-                        (Recommended) when you use your debit or credit card, the funds corresponding to the amount of
+                        (Recommended) When you use your debit or credit card, the funds corresponding to the amount of
                         the selected plan will be taken from your cheking account or will be debited from your line of
                         credit in near real time.
                     </p>
