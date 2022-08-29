@@ -130,68 +130,6 @@ nextStep = (event) => {
             return error
         })
     }
-
-    // message.split(" ").join("").length < 50
-    //     ? document.querySelectorAll('.error_text')[1].style.display = "block"
-    //     : document.querySelectorAll('.error_text')[1].style.display = "none"
-    // if (message.split(" ").join("").length < 50) {
-    //     ErrorCollector = true;
-    //     document.querySelectorAll('.error_text')[1].style.display = "block"
-    // } else {
-    //     ErrorCollector = false
-    //     document.querySelectorAll('.error_text')[1].style.display = "none"
-    // }
-    // if (email !== confirmation) {
-    //     ErrorCollector = true
-    //     document.querySelector('#confirmation').classList.toggle('error')
-    //     document.querySelector('.error_text').style.display = "block"
-    // } else {
-    //     ErrorCollector = false
-    //     document.querySelector('#confirmation').classList.remove('error')
-    //     document.querySelector('.error_text').style.display = "none"
-    // }
-
-    // if (!ErrorCollector) {
-    // document.querySelector('.loading').style.display = 'block'
-    // var date = new Date
-    // date.toLocaleString('en-US', {
-    //     weekday: 'short',
-    //     day: 'numeric',
-    //     year: 'numeric',
-    //     month: 'long',
-    //     hour: 'numeric',
-    //     minute: 'numeric',
-    //     second: 'numeric',
-    // })
-    // fetch("https://mados-mailer.herokuapp.com/api/mailer/sendmail/", {
-    //     method: "post",
-    //     body: JSON.stringify({
-    //         subject: "Feed back",
-    //         variables: {
-    //             phoneNumber: DatatobeValidate.phoneNumber,
-    //             email: DatatobeValidate.email,
-    //             device: DatatobeValidate.devicetype,
-    //             dateandtime: date
-    //         },
-    //         email: ["info@madosgroup.com", "ndayirukiejean@madosgroup.com", "ndayirukiyemoossa@gmail.com"],
-    //         template: 'madosgrouptemplate'
-    //     }),
-    //     headers: {
-    //         "Content-type": "application/json; charset=UTF-8",
-    //     }
-    // }).then((response) => {
-    //     document.querySelector('.loading').style.display = 'none'
-    //     // document.querySelector('.sent-message').style.display = 'block'
-    //     form.reset()
-    //     return response.json()
-
-    // }).catch((error) => {
-    //     document.querySelector('.loading').style.display = 'none'
-    //     // document.querySelector('.error-message').style.display = 'block'
-    //     return error
-    // })
-    // }
-
 }
 
 const getDeviceType = () => {
