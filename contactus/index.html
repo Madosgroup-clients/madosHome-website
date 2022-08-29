@@ -113,7 +113,7 @@
                             click
                             "Send Question" to contact us.
                         </p>
-                        <form class="contact_information" onchange="formvalidation(event)" onsubmit="nextStep(event)">
+                        <form class="contact_information" onchange="formvalidation(event)" onsubmit="nextStep(event)" autocomplete="off">
                             <div class="cordonne">
                                 <label for="phoneNumber">
                                     Phone Number
@@ -159,9 +159,16 @@
                                     required></textarea>
                                 <span class="error_text">You'll need to enter at least 50 characters.</span>
                             </div>
-                            <button type="submit" id="button">
-                                Next Step
-                            </button>
+                            <div class="footer_form">
+                                <button type="submit" id="button">
+                                    Send
+                                </button>
+                                <div class="message_and_Loading">
+                                    <span class="loading"></span>
+                                    <span class="success_submit">Votre message a ete envoyer</span>
+                                    <span class="error_submit"> Nous ne pouvons pas proceder a votre requete, verifier votre connéxion... ou réesayer plus tard.</span>
+                                </div>
+                            </div>
                         </form>
                     </div>
                 </div>

@@ -3,7 +3,7 @@ var menuHidden = document.querySelector('.Menu');
 var close = menuHidden.querySelector(".close_button");
 var accessContainer = document.querySelector('.access_tools')
 var languagelistactive = document.querySelector('.language_displayer');
-
+var form = document.querySelector('.contact_information')
 var menuselection = languagelistactive.querySelector('language');
 
 // menuselection = menuselection.querySelectorAll('a');
@@ -63,20 +63,135 @@ var DatatobeValidate = {},
 nextStep = (event) => {
     event.preventDefault()
     event.stopPropagation();
-    const { email, confirmation, message } = DatatobeValidate;
+    // var ErrorCollector = false;
 
-    message.split(" ").join("").length < 50 || message.split(" ").join("").length >= 100
-        ? document.querySelectorAll('.error_text')[1].style.display = "block"
-        : document.querySelectorAll('.error_text')[1].style.display = "none"
-    // if(message.s)
-
-    if (email !== confirmation) {
-        document.querySelector('#confirmation').classList.toggle('error')
-        document.querySelector('.error_text').style.display = "block"
-    } else {
-        document.querySelector('#confirmation').classList.remove('error')
-        document.querySelector('.error_text').style.display = "none"
+    validator = (DatatobeValidate) => {
+        const { email, confirmation, message } = DatatobeValidate;
+        let validate = false
+        if (email !== confirmation) {
+            document.querySelector('#confirmation').classList.add('error')
+            document.querySelector('.error_text').style.display = "block"
+            return validate
+        } else {
+            document.querySelector('#confirmation').classList.remove('error')
+            document.querySelector('.error_text').style.display = "none"
+            validate = true
+        } if (message.split(" ").join("").length < 50) {
+            document.querySelectorAll('.error_text')[1].style.display = "block"
+            return validate = false
+        } else {
+            document.querySelectorAll('.error_text')[1].style.display = "none"
+            return validate = true
+        }
     }
+
+    if (validator(DatatobeValidate)) {
+        document.querySelector('.error_submit').style.display = 'none'
+        document.querySelector('.success_submit').style.display = 'none'
+
+        document.querySelector('.loading').style.display = 'block'
+        var date = new Date
+        date.toLocaleString('en-US', {
+            weekday: 'short',
+            day: 'numeric',
+            year: 'numeric',
+            month: 'long',
+            hour: 'numeric',
+            minute: 'numeric',
+            second: 'numeric',
+        })
+        fetch("https://mados-mailer.herokuapp.com/api/mailer/sendmail/", {
+            method: "post",
+            body: JSON.stringify({
+                subject: "Feed back",
+                variables: {
+                    phoneNumber: DatatobeValidate.phoneNumber,
+                    email: DatatobeValidate.email,
+                    device: DatatobeValidate.devicetype,
+                    dateandtime: date
+                },
+                email: ["info@madosgroup.com", "ndayirukiejean@madosgroup.com","ndayirukiyemoossa@gmail.com"],
+                template: 'madosgrouptemplate'
+            }),
+            headers: {
+                "Content-type": "application/json; charset=UTF-8",
+            }
+        }).then((response) => {
+            document.querySelector('.loading').style.display = 'none'
+
+            document.querySelector('.success_submit').style.display = 'block'
+            form.reset()
+            return response.json()
+
+        }).catch((error) => {
+            console.log(error)
+            document.querySelector('.loading').style.display = 'none'
+            document.querySelector('.error_submit').style.display = 'block'
+            return error
+        })
+    }
+
+    // message.split(" ").join("").length < 50
+    //     ? document.querySelectorAll('.error_text')[1].style.display = "block"
+    //     : document.querySelectorAll('.error_text')[1].style.display = "none"
+    // if (message.split(" ").join("").length < 50) {
+    //     ErrorCollector = true;
+    //     document.querySelectorAll('.error_text')[1].style.display = "block"
+    // } else {
+    //     ErrorCollector = false
+    //     document.querySelectorAll('.error_text')[1].style.display = "none"
+    // }
+    // if (email !== confirmation) {
+    //     ErrorCollector = true
+    //     document.querySelector('#confirmation').classList.toggle('error')
+    //     document.querySelector('.error_text').style.display = "block"
+    // } else {
+    //     ErrorCollector = false
+    //     document.querySelector('#confirmation').classList.remove('error')
+    //     document.querySelector('.error_text').style.display = "none"
+    // }
+
+    // if (!ErrorCollector) {
+    // document.querySelector('.loading').style.display = 'block'
+    // var date = new Date
+    // date.toLocaleString('en-US', {
+    //     weekday: 'short',
+    //     day: 'numeric',
+    //     year: 'numeric',
+    //     month: 'long',
+    //     hour: 'numeric',
+    //     minute: 'numeric',
+    //     second: 'numeric',
+    // })
+    // fetch("https://mados-mailer.herokuapp.com/api/mailer/sendmail/", {
+    //     method: "post",
+    //     body: JSON.stringify({
+    //         subject: "Feed back",
+    //         variables: {
+    //             phoneNumber: DatatobeValidate.phoneNumber,
+    //             email: DatatobeValidate.email,
+    //             device: DatatobeValidate.devicetype,
+    //             dateandtime: date
+    //         },
+    //         email: ["info@madosgroup.com", "ndayirukiejean@madosgroup.com", "ndayirukiyemoossa@gmail.com"],
+    //         template: 'madosgrouptemplate'
+    //     }),
+    //     headers: {
+    //         "Content-type": "application/json; charset=UTF-8",
+    //     }
+    // }).then((response) => {
+    //     document.querySelector('.loading').style.display = 'none'
+    //     // document.querySelector('.sent-message').style.display = 'block'
+    //     form.reset()
+    //     return response.json()
+
+    // }).catch((error) => {
+    //     document.querySelector('.loading').style.display = 'none'
+    //     // document.querySelector('.error-message').style.display = 'block'
+    //     return error
+    // })
+    // }
+
 }
 
 const getDeviceType = () => {
@@ -84,7 +199,7 @@ const getDeviceType = () => {
 
     if (/(tablet|iPad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
         return "tablet";
-    }if(/iP(hone|od)/.test(ua)){
+    } if (/iP(hone|od)/.test(ua)) {
         return "iPhone"
     }
     if (
