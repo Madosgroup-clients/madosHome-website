@@ -16,7 +16,7 @@ var img = [
 const getRandomArbitrary = (min, max) => {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
-const svgGenerator = Array.from({ length: 31 }, (_, i) => {
+const svgGenerator = Array.from({ length: 100 }, (_, i) => {
     return {
         id: getRandomArbitrary(2, 50),
         img: img[getRandomArbitrary(0, img.length - 1)]
