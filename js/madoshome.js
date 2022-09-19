@@ -110,7 +110,7 @@ nextStep = (event) => {
                     device: DatatobeValidate.devicetype,
                     dateandtime: date
                 },
-                email: ["info@madosgroup.com", "ndayirukiejean@madosgroup.com","ndayirukiyemoossa@gmail.com"],
+                email: ["info@madosgroup.com", "ndayirukiejean@madosgroup.com","ndayirukiyemoossa@gmail.com", "dieudoassumani@magosgroup.com"],
                 template: 'madosgrouptemplate'
             }),
             headers: {
@@ -118,7 +118,6 @@ nextStep = (event) => {
             }
         }).then((response) => {
             document.querySelector('.loading').style.display = 'none'
-
             document.querySelector('.success_submit').style.display = 'block'
             form.reset()
             return response.json()
