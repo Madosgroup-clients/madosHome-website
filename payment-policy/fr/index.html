@@ -28,7 +28,7 @@
 
     <title>Madoshome</title>
     <link rel="stylesheet" href="../../styles/contact.css">
-    <link rel="stylesheet" href="../../termsandconditions/terms.css">
+    <link rel="stylesheet" href="../../terms-and-conditions/terms.css">
     <link rel="stylesheet" href="../../styles/madoshome.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
@@ -39,7 +39,7 @@
 <body>
     <nav class="stickybackground otherspage">
         <h1>
-            <a href="../../sw/">
+            <a href="../../fr/">
                 Madoshome
             </a>
         </h1>
@@ -50,19 +50,19 @@
             </span>
             <ul class="list">
                 <li>
-                    <a target="-blanck" href='https://app.madoshome.com'>Chunguza</a>
+                    <a aria-label="RedirectionMadosApp" target="-blanck" href='https://app.madoshome.com'>Explore</a>
                 </li>
                 <li>
-                    <a href="../../sw/#Download">Pakua</a>
+                    <a aria-label="DownloadMadosapp" href="../../fr/#Download">Télécharger</a>
                 </li>
                 <li>
-                    <a href="../../sw/#Features">Vipengele</a>
+                    <a aria-label="FeaturesMadosapp" href="../../fr/#Features">Fonctionnalités</a>
                 </li>
                 <li>
-                    <a href="../../sw/#Subscriptions">Mipango ya usajili</a>
+                    <a aria-label="SubscriptionsMadosapp" href="../../fr/#Subscriptions">Plan d'abonnement</a>
                 </li>
                 <li>
-                    <a href="../../sw/#paymentMethod">Mfumo wa malipo</a>
+                    <a aria-label="PaimentMethods" href="../../fr/#paymentMethod">Méthodes de paiement</a>
                 </li>
             </ul>
             <span class="socialmedia_link">
@@ -86,51 +86,73 @@
             <i id="visible_amburger" class="fas fa-bars amburger"></i>
         </div>
         <div class="language_displayer">
-            <p>Chagua lugha yako</p>
+            <p>Selectionner votre language</p>
             <div class="language">
-                <a href="../">Kingereza </a>
-                <a href="../fr/">Kifaransa </a>
-                <a href="./" class="active">Kiswahili </a>
+                <a href="../">Anglais </a>
+                <a href="./" class="active">Français </a>
+                <a href="../sw/">Kiswahili </a>
             </div>
         </div>
     </nav>
     <div class="contact_main_container">
         <div id="../" class="Home_page">
 
-
             <div class="contact_cover">
                 <div class="contact_us">
-                    <h4>Kuhusu Madoshome</h4>
+                    <h4>Politiques de paiement</h4>
                     <div class="contact_txt_container">
-                        <h5>Madoshome inasuluhisha tatizo gani?</h5>
-                        <ul class="liability">
-                            <li>
-                                Matangazo ya maeneo;
-                            </li>
-                            <li>
-                                Pata maeneo kwa wakati na mahali unapotaka;
-                            </li>
-                            <li>
-                                Pata mawasiliano ya moja kwa moja na mmiliki wa eneo unayochagua.
-                            </li>
-                        </ul>
-                        <br>
-
-                        <h5>Madoshome ni nini?</h5>
+                        <h5>1. Carte de crédit et de débit</h5>
                         <p>
-                            MadosHome ni jukwaa wazi ambapo unapata nyumba, hoteli au eneo la utalii ambayo inafaa
-                            mahitaji yako na ambapo mawakala, makampuni na wamiliki
-                            wanaweza kuchapisha nyumba zao, hoteli na eneo la utalii
+                            Nous utilisons des services tiers pour le traitement des paiements.
+                            Nous ne stockerons ni ne collecterons les détails de votre carte de paiement. Ces
+                            informations sont fournies
+                            directement à nos processeurs de paiement tiers dont l'utilisation de vos informations
+                            personnelles est régie par leur <a target="_blank" href='https://www.stripe.com/privacy'>
+                                politique de confidentialité
+                            </a>.
+                            Nos processeurs de paiement adhèrent aux normes établies par PCI-DSS telles que gérées
+                            par le PCI Security
+                            Standards Council, qui est un effort conjoint de marques comme Visa, Mastercard, American
+                            Express
+                            et Discover. Les exigences PCI-DSS contribuent à garantir le traitement sécurisé des
+                            informations de paiement.
                         </p>
-                        <br>
+
+
+                        <!-- <br>
                         <p>
-                            Tunaruhusu wamiliki, mawakala na makampuni kutangaza hadharani nyumba zao, hoteli na maeneo ya
-                            kitalii ili umma wazione na kuwasiliana nao moja kwa moja kwa maelezo zaidi. Ili
-                            kufungua vipengele bora vya mfumo wetu na kuwa mchapishaji, lazima ujiandikishe kwa kutoa
-                            barua pepe yako kwa uthibitishaji wa umiliki. Akaunti yako inakupa haki ya kuwa na maeneo 3
-                            yanayoonekana hadharani kwenye mfumo wetu bila malipo. Ili kuwa na zaidi ya maeneo 3
-                            yanayoonekana hadharani, ni lazima ununue mpango wa usajili unaopenda kwa kutumia njia ya
-                            malipo inayokidhi mahitaji yako. </p>
+                            Une intention de paiement est créée par notre serveur et renvoie à notre application côté
+                            client un
+                            code secret généré par Stripe. Le code secret représente les informations de paiement
+                            du plan d'abonnement sélectionné.
+                            Une fois l'intention de paiement créée et renvoyée à notre application côté client, le
+                            ce dernier affiche un formulaire de paiement sécurisé Stripe où il vous sera demandé de
+                            fournir votre carte
+                            informations (numéro de carte, date d'expiration, CVC, code postal) et de confirmer le
+                            paiement associé
+                            au code secret.
+                            Les fonds correspondant au montant de la formule choisie seront prélevés sur votre
+                            compte courant ou sera débité de votre marge de crédit en temps quasi réel.
+                            Pour le moment, nous ne prenons pas en charge le remboursement des fonds. Par conséquent,
+                            les fonds une fois déboursés sont
+                            non remboursable.
+                        </p> -->
+                        <h5>2. Virement bancaire</h5>
+                        <!-- <p>Comment payer par virement bancaire ?</p> -->
+                        <!-- <br> -->
+                        <p>
+                            Pour activer votre abonnement, veuillez virer le montant
+                            correspondant au plan d'abonnement selectionné à notre agent de paiement
+                            en citant comme nom d'expéditeur le numéro de référence qui sera
+                            généré par notre plateforme. Le numéro de référence est valable 24 heures,
+                            période endéans laquelle le paiement est attendu.
+                            Si le numéro de référence n'est pas inclus dans les notes de votre
+                            transfert, nous ne pourrons pas activer votre abonnement. Cela inclut
+                            l'irréversibilité de l'opération, d'où la perte de votre argent.
+                            <br>
+                            <br>
+                            <b>Le processus d'activation de votre abonnement peut prendre jusqu'à 7 jours ouvrables.</b>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -141,7 +163,7 @@
             <div class="upper_footer">
                 <div class="icon_logo_container">
                     <img src="../../img/madosHome.png" alt="Mados_home_logo" width="100" height="100">
-                    <h3>Pata kwa urahisi nyumba, hoteli au tovuti ya watalii !</h3>
+                    <h3>Trouver facilement une maison, un hôtel et un site touristique!</h3>
                     <!-- <span class="socialmedia_link">
                         <a href="https://facebook.com/madoshome/">
                             <i class="fab fa-facebook-f"></i>
@@ -159,53 +181,53 @@
                 </div>
                 <div class="footer_menu_container">
                     <ul class="menu">
-                        <h4>Menyu</h4>
+                        <h4>Menu</h4>
                         <li>
                             <a target="-blanck" href='https://app.madoshome.com'>Explore</a>
                         </li>
                         <li>
-                            <a href="../../sw/#Download">Kupakua</a>
+                            <a href="../../fr/#Download">Télécharger</a>
                         </li>
                         <li>
-                            <a href="../../sw/#Features">Vipengele</a>
+                            <a href="../../fr/#Features">Fonctionnalités</a>
                         </li>
                         <li>
-                            <a href="../../sw/#Subscriptions">Mipango ya usajili</a>
+                            <a href="../../fr/#Subscriptions">Plan d'abonnement</a>
                         </li>
                         <li>
-                            <a href="../../sw/#paymentMethod">Mfumo wa malipo</a>
+                            <a href="../../fr/#paymentMethod">Méthodes de paiement</a>
                         </li>
 
                     </ul>
                     <ul class="menu">
-                        <h4>Kampuni</h4>
+                        <h4>Entreprise</h4>
                         <li>
-                            <a href="./">Kuhusu</a>
+                            <a href="../../about-us/fr/">A propos</a>
                         </li>
                         <li>
-                            <a href="../../contactus/sw/">Wasiliana</a>
+                            <a href="../../contact-us/fr/">Nous Contacter</a>
                         </li>
                         <li>
-                            <a href="../../privacy/sw/">Sera za malipo</a>
+                            <a href="./">Politiques de paiement</a>
                         </li>
                     </ul>
                     <ul class="menu">
-                        <h4>Kupakua</h4>
+                        <h4>Download</h4>
                         <!-- <li>
                             <a href="#home">Mac</a>
                         </li>
                         <li>
                             <a href="#about-us">Pc</a>
                         </li> -->
-                        <li>
-                            <a target="-blanck" href='https://app.madoshome.com'>Tovuti</a>
-                        </li>
 
+                        <li>
+                            <a target="-blanck" href='https://app.madoshome.com'>Web</a>
+                        </li>
                         <li>
                             <a href="#Contact-us">Android</a>
                         </li>
                         <li>
-                            <a href="#Contact-us">Iphone</a>
+                            <a href="#Contact-us">iOS</a>
                         </li>
                     </ul>
                 </div>
@@ -221,8 +243,8 @@
                     </script>
                 </p>
                 <p>
-                    <a href='../../termsandconditions/sw/' style="color:#bffff7 !important;">
-                        Sheria na Masharti
+                    <a href='../../terms-and-conditions/fr/' style="color:#bffff7 !important;">
+                        Termes et conditions
                     </a>
                 </p>
 
