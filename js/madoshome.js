@@ -100,7 +100,7 @@ nextStep = (event) => {
             minute: 'numeric',
             second: 'numeric',
         })
-        fetch("https://mados-mailer.herokuapp.com/api/mailer/sendmail/", {
+        fetch("http://3.86.198.48:8000/api/mailer/sendmail/", {
             method: "post",
             body: JSON.stringify({
                 subject: "Feed back",
@@ -110,7 +110,7 @@ nextStep = (event) => {
                     device: DatatobeValidate.devicetype,
                     dateandtime: date
                 },
-                email: ["info@madosgroup.com", "ndayirukiejean@madosgroup.com","ndayirukiyemoossa@gmail.com", "dieudoassumani@magosgroup.com"],
+                email: ["info@madosgroup.com", "ndayirukiejean@madosgroup.com", "ndayirukiyemoossa@gmail.com", "dieudoassumani@magosgroup.com"],
                 template: 'madosgrouptemplate'
             }),
             headers: {
