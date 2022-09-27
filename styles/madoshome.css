@@ -877,3 +877,23 @@ nav > .Menu > .list {
   }
 }
 
+.app_provider_container{
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .2rem .5rem;
+  border: 2px solid var(--bgColor);
+  border-radius: .5rem;
+  /* background-color:#fff; */
+  margin-block: .5rem;
+}.app_provider_container .descriptions{
+ display: flex ;
+ flex-direction: column;
+ justify-content: flex-start;
+}.descriptions p{
+  font-size: .8rem;
+  color: var(--bgColor);
+}.descriptions .title{
+  font-size: 1rem;
+  font-weight: 600;
+}
