@@ -92,7 +92,6 @@
 }
 input[type="radio"] {
   display: flex;
-  /* place-items: center; */
   justify-content: center;
   align-items: center;
   appearance: none;
