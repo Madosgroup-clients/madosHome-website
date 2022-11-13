@@ -2,16 +2,15 @@ const svg_container = document.querySelector('.main_svg')
 
 
 var img = [
-    "../img/svg_cover/camera.svg",
-    "../img/svg_cover/compass.svg",
-    "../img/svg_cover/compass_2.svg",
-    "../img/svg_cover/filter.svg",
-    "../img/svg_cover/home.svg",
-    "../img/svg_cover/map-pin.svg",
-    "../img/svg_cover/map.svg",
-    "../img/svg_cover/search.svg",
-    "../img/svg_cover/smartphone.svg",
-    "../img/svg_cover/users.svg"
+    "https://s3.eu-west-3.amazonaws.com/media.madoshome/utils/camera.svg",
+    "https://s3.eu-west-3.amazonaws.com/media.madoshome/utils/compass_2.svg",
+    "https://s3.eu-west-3.amazonaws.com/media.madoshome/utils/filter.svg",
+    "https://s3.eu-west-3.amazonaws.com/media.madoshome/utils/home.svg",
+    "https://s3.eu-west-3.amazonaws.com/media.madoshome/utils/map-pin.svg",
+    "https://s3.eu-west-3.amazonaws.com/media.madoshome/utils/map.svg",
+    "https://s3.eu-west-3.amazonaws.com/media.madoshome/utils/search.svg",
+    "https://s3.eu-west-3.amazonaws.com/media.madoshome/utils/smartphone.svg",
+    "https://s3.eu-west-3.amazonaws.com/media.madoshome/utils/users.svg",
 ]
 const getRandomArbitrary = (min, max) => {
     return Math.floor(Math.random() * (max - min + 1)) + min;
