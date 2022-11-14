@@ -1,10 +1,10 @@
 var menutoggle = document.querySelector('#visible_amburger');
 var menuHidden = document.querySelector('.Menu');
-var close = menuHidden.querySelector(".close_button");
+var close = menuHidden?.querySelector(".close_button");
 var accessContainer = document.querySelector('.access_tools')
 var languagelistactive = document.querySelector('.language_displayer');
 var form = document.querySelector('.contact_information')
-var menuselection = languagelistactive.querySelector('language');
+var menuselection = languagelistactive?.querySelector('language');
 
 // menuselection = menuselection.querySelectorAll('a');
 
@@ -34,7 +34,8 @@ var menuselection = languagelistactive.querySelector('language');
 
 // console.log(languagelistactive)
 
-var language = accessContainer.querySelector('i');
+
+var language = accessContainer?.querySelector('i');
 
 language.addEventListener('click', (event) => {
     event.stopPropagation();
