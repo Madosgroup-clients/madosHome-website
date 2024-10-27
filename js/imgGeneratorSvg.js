@@ -2,9 +2,9 @@ const svg_container = document.querySelector('.main_svg')
 
 
 var img = [
-    "https://s3.eu-west-3.amazonaws.com/media.madoshome/utils/camera.svg",
-    "https://s3.eu-west-3.amazonaws.com/media.madoshome/utils/compass_2.svg",
-    "https://s3.eu-west-3.amazonaws.com/media.madoshome/utils/filter.svg",
+    "https://www.svgrepo.com/show/530373/camera-take-pictures.svg",
+    "https://www.svgrepo.com/show/501858/compass-compass.svg",
+    "https://www.svgrepo.com/show/527709/filter.svg",
     "https://s3.eu-west-3.amazonaws.com/media.madoshome/utils/home.svg",
     "https://s3.eu-west-3.amazonaws.com/media.madoshome/utils/map-pin.svg",
     "https://s3.eu-west-3.amazonaws.com/media.madoshome/utils/map.svg",
