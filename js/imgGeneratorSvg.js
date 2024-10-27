@@ -5,12 +5,12 @@ var img = [
     "https://www.svgrepo.com/show/530373/camera-take-pictures.svg",
     "https://www.svgrepo.com/show/501858/compass-compass.svg",
     "https://www.svgrepo.com/show/527709/filter.svg",
-    "https://s3.eu-west-3.amazonaws.com/media.madoshome/utils/home.svg",
-    "https://s3.eu-west-3.amazonaws.com/media.madoshome/utils/map-pin.svg",
-    "https://s3.eu-west-3.amazonaws.com/media.madoshome/utils/map.svg",
-    "https://s3.eu-west-3.amazonaws.com/media.madoshome/utils/search.svg",
-    "https://s3.eu-west-3.amazonaws.com/media.madoshome/utils/smartphone.svg",
-    "https://s3.eu-west-3.amazonaws.com/media.madoshome/utils/users.svg",
+    "https://www.svgrepo.com/show/525383/home-1.svg",
+    "https://www.svgrepo.com/show/461893/map-pin.svg",
+    "https://www.svgrepo.com/show/530260/map.svg",
+    "https://www.svgrepo.com/show/530510/search.svg",
+    "https://www.svgrepo.com/show/522281/smartphone.svg",
+    "https://www.svgrepo.com/show/511200/users-group.svg",
 ]
 const getRandomArbitrary = (min, max) => {
     return Math.floor(Math.random() * (max - min + 1)) + min;
